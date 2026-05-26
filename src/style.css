@@ -1303,9 +1303,9 @@ a.info-card:hover {
    ============================================================ */
 @media (max-width: 640px) {
   :root {
-    --space-2xl: 4rem;
-    --space-xl: 2.5rem;
-    --space-lg: 2rem;
+    --space-2xl: 3.5rem;
+    --space-xl: 2rem;
+    --space-lg: 1.75rem;
   }
 
   .hide-mobile { display: none; }
@@ -1345,16 +1345,49 @@ a.info-card:hover {
   .header-cta { display: none; }
 
   /* Hero */
-  .hero-content {
-    padding-block: var(--space-xl);
+  .hero-headline {
+    font-size: clamp(1.875rem, 8vw, 2.5rem);
   }
 
-  .hero-stats {
-    gap: var(--space-md);
-    flex-wrap: wrap;
+  .hero-sub {
+    font-size: 0.9375rem;
   }
+
+  .hero-content {
+    padding-top: var(--space-lg);
+    padding-bottom: 3rem;
+    gap: var(--space-sm);
+  }
+
+  /* Stats: 3 colunas iguais numa linha só */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    flex-wrap: unset;
+    padding-top: var(--space-sm);
+  }
+
+  .hero-stat {
+    padding-inline: var(--space-xs);
+    border-right: 1px solid var(--color-border);
+  }
+
+  .hero-stat:first-child { padding-left: 0; }
+  .hero-stat:last-child  { border-right: none; }
+
+  .stat-number { font-size: 1.25rem; }
+  .stat-label  { font-size: 0.725rem; }
 
   .hero-stat-divider { display: none; }
+
+  /* Esconde o indicador de scroll no mobile para não colidir */
+  .hero-scroll-indicator { display: none; }
+
+  /* Section header — reduz margem inferior */
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
 
   /* Services */
   .services-grid {
@@ -1362,36 +1395,64 @@ a.info-card:hover {
     gap: var(--space-sm);
   }
 
+  .service-card {
+    padding: var(--space-md);
+  }
+
   /* Sobre */
   .sobre-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-lg);
+    gap: var(--space-md);
+  }
+
+  .sobre-text {
+    gap: var(--space-sm);
+  }
+
+  .sobre-body {
+    font-size: 0.9375rem;
   }
 
   .sobre-stats {
-    gap: var(--space-md);
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
   }
 
-  .floating-badge {
-    display: none;
-  }
+  .stat-big { font-size: 1.5rem; }
+
+  .floating-badge { display: none; }
+
+  /* Code window — fonte menor pra não transbordar */
+  .code-block { font-size: 0.75rem; }
 
   /* Portfolio */
   .portfolio-grid {
     grid-template-columns: 1fr;
   }
 
+  .portfolio-card-visual {
+    height: 160px;
+  }
+
   /* Contact */
   .contato-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-lg);
+    gap: var(--space-md);
+  }
+
+  .contato-form-wrap {
+    padding: var(--space-md);
+  }
+
+  .contact-form {
+    gap: var(--space-sm);
   }
 
   /* Footer */
   .footer-inner {
     grid-template-columns: 1fr;
-    gap: var(--space-lg);
+    gap: var(--space-md);
     padding-block: var(--space-lg);
   }
 
@@ -1402,7 +1463,7 @@ a.info-card:hover {
     text-align: center;
   }
 
-  /* Section header on mobile */
+  /* Section header alinhado à esquerda na seção Sobre */
   .sobre-text .section-header {
     align-items: flex-start;
     text-align: left;
