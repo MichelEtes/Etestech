@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Etestech — Desenvolvimento de sites e aplicativos sob medida em São Bernardo do Campo, SP. Transformamos suas ideias em experiências digitais." />
+  <meta name="theme-color" content="#0F172A" />
+  <title>Etestech — Desenvolvimento Web e Apps</title>
+
+  <link rel="icon" type="image/svg+xml" href="/src/assets/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#hero" class="logo" aria-label="Etestech — Início">
+        <span class="logo-mark" aria-hidden="true">E</span>
+        <span class="logo-text">testech</span>
+      </a>
+
+      <nav class="nav" id="main-nav" aria-label="Navegação principal">
+        <ul class="nav-list" role="list">
+          <li><a href="#servicos" class="nav-link">Serviços</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contato" class="btn btn-primary btn-sm header-cta" aria-label="Fale conosco — ir para seção de contato">
+        Fale Conosco
+      </a>
+
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="hero" aria-label="Apresentação">
+      <div class="hero-bg" aria-hidden="true">
+        <svg class="hero-grid" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+              <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(37,99,235,0.12)" stroke-width="1"/>
+            </pattern>
+            <radialGradient id="glow-center" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="rgba(37,99,235,0.15)"/>
+              <stop offset="100%" stop-color="rgba(15,23,42,0)"/>
+            </radialGradient>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)"/>
+          <rect width="100%" height="100%" fill="url(#glow-center)"/>
+        </svg>
+        <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-badge animate-hero" style="--delay: 0ms">
+          <span class="badge-dot" aria-hidden="true"></span>
+          São Bernardo do Campo, SP · Brasil
+        </div>
+        <h1 class="hero-headline animate-hero" style="--delay: 100ms">
+          Transformamos ideias em<br />
+          <span class="text-gradient">experiências digitais</span>
+        </h1>
+        <p class="hero-sub animate-hero" style="--delay: 200ms">
+          Sites modernos e aplicativos sob medida para o seu negócio —<br class="hide-mobile" />
+          feitos em São Bernardo do Campo para o Brasil.
+        </p>
+        <div class="hero-actions animate-hero" style="--delay: 300ms">
+          <a href="#servicos" class="btn btn-primary" aria-label="Ver nossos serviços">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            Ver Serviços
+          </a>
+          <a href="https://wa.me/5511994916755" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Falar no WhatsApp — abre em nova aba">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Falar no WhatsApp
+          </a>
+        </div>
+
+        <div class="hero-stats animate-hero" style="--delay: 400ms" aria-label="Números da empresa">
+          <div class="hero-stat">
+            <span class="stat-number">+50</span>
+            <span class="stat-label">Projetos entregues</span>
+          </div>
+          <div class="hero-stat-divider" aria-hidden="true"></div>
+          <div class="hero-stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Satisfação dos clientes</span>
+          </div>
+          <div class="hero-stat-divider" aria-hidden="true"></div>
+          <div class="hero-stat">
+            <span class="stat-number">24h</span>
+            <span class="stat-label">Suporte de resposta</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator animate-hero" style="--delay: 600ms" aria-hidden="true">
+        <div class="scroll-dot"></div>
+      </div>
+    </section>
+
+    <!-- ===== SERVIÇOS ===== -->
+    <section id="servicos" class="section" aria-labelledby="servicos-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">O que fazemos</span>
+          <h2 id="servicos-title" class="section-title">Soluções digitais<br />do início ao fim</h2>
+          <p class="section-sub">Do conceito ao código, entregamos projetos completos com qualidade e no prazo combinado.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal stagger-1" aria-label="Serviço: Sites Institucionais">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3 class="card-title">Sites Institucionais</h3>
+            <p class="card-desc">Sites rápidos, modernos e responsivos que representam sua marca com profissionalismo e convertem visitantes em clientes.</p>
+            <div class="card-tag">Web Design</div>
+          </article>
+
+          <article class="service-card reveal stagger-2" aria-label="Serviço: Lojas Virtuais">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </div>
+            <h3 class="card-title">Lojas Virtuais (E-commerce)</h3>
+            <p class="card-desc">Plataformas de venda online completas, integradas com meios de pagamento e logística para turbinar suas vendas digitais.</p>
+            <div class="card-tag">E-commerce</div>
+          </article>
+
+          <article class="service-card reveal stagger-3" aria-label="Serviço: Aplicativos Web e Mobile">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <h3 class="card-title">Aplicativos Web e Mobile</h3>
+            <p class="card-desc">Apps customizados para resolver os desafios específicos do seu negócio, com UX intuitiva e performance de ponta.</p>
+            <div class="card-tag">Mobile &amp; Web App</div>
+          </article>
+
+          <article class="service-card reveal stagger-4" aria-label="Serviço: Sistemas e Automações">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+            </div>
+            <h3 class="card-title">Sistemas e Automações</h3>
+            <p class="card-desc">Soluções internas, integrações via API e automação de processos para aumentar a eficiência do seu time.</p>
+            <div class="card-tag">Integração &amp; API</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE ===== -->
+    <section id="sobre" class="section section-alt" aria-labelledby="sobre-title">
+      <div class="container sobre-grid">
+        <div class="sobre-text">
+          <div class="section-header reveal" style="text-align:left; align-items:flex-start;">
+            <span class="section-tag">Quem somos</span>
+            <h2 id="sobre-title" class="section-title">Tecnologia feita com<br />propósito e cuidado</h2>
+          </div>
+          <p class="sobre-body reveal">
+            A Etestech é uma empresa de tecnologia sediada em São Bernardo do Campo, SP. Criamos soluções digitais para negócios que querem crescer online — com qualidade, prazo e transparência em cada etapa do projeto.
+          </p>
+          <p class="sobre-body reveal">
+            Trabalhamos lado a lado com nossos clientes para entender seus desafios reais e entregar produtos digitais que fazem diferença. Cada detalhe importa — do primeiro wireframe ao deploy em produção.
+          </p>
+
+          <div class="sobre-stats reveal">
+            <div class="sobre-stat">
+              <span class="stat-big">+50</span>
+              <span class="stat-desc">Projetos entregues</span>
+            </div>
+            <div class="sobre-stat">
+              <span class="stat-big">100%</span>
+              <span class="stat-desc">Satisfação dos clientes</span>
+            </div>
+            <div class="sobre-stat">
+              <span class="stat-big">∞</span>
+              <span class="stat-desc">Suporte contínuo</span>
+            </div>
+          </div>
+
+          <a href="#contato" class="btn btn-primary reveal" aria-label="Solicitar um orçamento">
+            Solicitar Orçamento
+          </a>
+        </div>
+
+        <div class="sobre-visual reveal" aria-hidden="true">
+          <div class="code-window">
+            <div class="code-window-bar">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="code-window-title">etestech.js</span>
+            </div>
+            <div class="code-window-body">
+              <pre class="code-block"><code><span class="c-kw">const</span> <span class="c-var">etestech</span> <span class="c-op">=</span> <span class="c-punc">{</span>
+  <span class="c-prop">missao</span><span class="c-op">:</span> <span class="c-str">'Transformar ideias'</span><span class="c-punc">,</span>
+  <span class="c-prop">local</span><span class="c-op">:</span> <span class="c-str">'São Bernardo, SP'</span><span class="c-punc">,</span>
+  <span class="c-prop">stack</span><span class="c-op">:</span> <span class="c-punc">[</span>
+    <span class="c-str">'React'</span><span class="c-punc">,</span>
+    <span class="c-str">'Node.js'</span><span class="c-punc">,</span>
+    <span class="c-str">'React Native'</span><span class="c-punc">,</span>
+    <span class="c-str">'PostgreSQL'</span><span class="c-punc">,</span>
+  <span class="c-punc">],</span>
+  <span class="c-prop">entrega</span><span class="c-op">:</span> <span class="c-punc">{</span>
+    <span class="c-prop">qualidade</span><span class="c-op">:</span> <span class="c-bool">true</span><span class="c-punc">,</span>
+    <span class="c-prop">prazo</span><span class="c-op">:</span> <span class="c-bool">true</span><span class="c-punc">,</span>
+    <span class="c-prop">suporte</span><span class="c-op">:</span> <span class="c-str">'24/7'</span><span class="c-punc">,</span>
+  <span class="c-punc">},</span>
+<span class="c-punc">};</span>
+
+<span class="c-fn">console</span><span class="c-op">.</span><span class="c-fn">log</span><span class="c-punc">(</span><span class="c-str">'Prontos para o seu projeto!'</span><span class="c-punc">)</span><span class="c-op">;</span>
+</code></pre>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-tech-1">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Deploy realizado
+          </div>
+          <div class="floating-badge badge-tech-2">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span style="color: var(--color-accent)">Entrega no prazo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PORTFÓLIO ===== -->
+    <section id="portfolio" class="section" aria-labelledby="portfolio-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Portfólio</span>
+          <h2 id="portfolio-title" class="section-title">Projetos em destaque</h2>
+          <p class="section-sub">Uma amostra do que construímos. Cada projeto é uma história de parceria e resultado.</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-card reveal stagger-1" aria-label="Projeto: Plataforma E-commerce">
+            <div class="portfolio-card-visual" style="--grad: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%)">
+              <div class="portfolio-mockup" aria-hidden="true">
+                <div class="pm-bar"></div>
+                <div class="pm-bar pm-bar-short"></div>
+                <div class="pm-grid">
+                  <div class="pm-item"></div>
+                  <div class="pm-item"></div>
+                  <div class="pm-item"></div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-card-body">
+              <span class="portfolio-tag">E-commerce</span>
+              <h3 class="portfolio-title">Plataforma de Vendas Online</h3>
+              <p class="portfolio-desc">Loja virtual completa com integração de pagamento, gestão de estoque e painel administrativo customizado.</p>
+              <a href="#contato" class="portfolio-link" aria-label="Ver mais sobre este projeto">
+                Solicitar projeto similar
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal stagger-2" aria-label="Projeto: Aplicativo de Gestão">
+            <div class="portfolio-card-visual" style="--grad: linear-gradient(135deg, #7C3AED 0%, #2563EB 100%)">
+              <div class="portfolio-mockup portfolio-mockup-mobile" aria-hidden="true">
+                <div class="pm-phone">
+                  <div class="pm-phone-screen">
+                    <div class="pm-bar"></div>
+                    <div class="pm-bar pm-bar-short"></div>
+                    <div class="pm-circle"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-card-body">
+              <span class="portfolio-tag">Aplicativo Mobile</span>
+              <h3 class="portfolio-title">App de Gestão Empresarial</h3>
+              <p class="portfolio-desc">Aplicativo mobile para controle de pedidos, equipe e financeiro em tempo real, com sincronização em nuvem.</p>
+              <a href="#contato" class="portfolio-link" aria-label="Ver mais sobre este projeto">
+                Solicitar projeto similar
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal stagger-3" aria-label="Projeto: Sistema de Automação">
+            <div class="portfolio-card-visual" style="--grad: linear-gradient(135deg, #0F9E6E 0%, #06B6D4 100%)">
+              <div class="portfolio-mockup" aria-hidden="true">
+                <div class="pm-terminal">
+                  <div class="pm-terminal-line"></div>
+                  <div class="pm-terminal-line pm-short"></div>
+                  <div class="pm-terminal-line"></div>
+                  <div class="pm-terminal-cursor"></div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-card-body">
+              <span class="portfolio-tag">Automação &amp; API</span>
+              <h3 class="portfolio-title">Sistema de Automação de Processos</h3>
+              <p class="portfolio-desc">Integração entre sistemas legados e plataformas modernas, reduzindo trabalho manual em 80% para o cliente.</p>
+              <a href="#contato" class="portfolio-link" aria-label="Ver mais sobre este projeto">
+                Solicitar projeto similar
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTATO ===== -->
+    <section id="contato" class="section section-alt" aria-labelledby="contato-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Contato</span>
+          <h2 id="contato-title" class="section-title">Vamos conversar</h2>
+          <p class="section-sub">Solicite um orçamento ou tire suas dúvidas. Respondemos em até 24h.</p>
+        </div>
+
+        <div class="contato-grid">
+          <!-- FORM -->
+          <div class="contato-form-wrap reveal">
+            <form
+              id="contact-form"
+              class="contact-form"
+              novalidate
+              aria-label="Formulário de contato"
+            >
+              <div class="form-group">
+                <label for="nome" class="form-label">Nome <span aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  class="form-input"
+                  placeholder="Seu nome completo"
+                  required
+                  autocomplete="name"
+                  aria-required="true"
+                />
+                <span class="form-error" id="nome-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">E-mail <span aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="seu@email.com"
+                  required
+                  autocomplete="email"
+                  aria-required="true"
+                />
+                <span class="form-error" id="email-error" role="alert"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="telefone" class="form-label">
+                  Telefone <span class="label-optional">(opcional)</span>
+                </label>
+                <input
+                  type="tel"
+                  id="telefone"
+                  name="telefone"
+                  class="form-input"
+                  placeholder="(11) 99999-9999"
+                  autocomplete="tel"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="mensagem" class="form-label">Mensagem <span aria-hidden="true">*</span></label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  class="form-input form-textarea"
+                  placeholder="Descreva seu projeto ou dúvida..."
+                  required
+                  rows="5"
+                  aria-required="true"
+                ></textarea>
+                <span class="form-error" id="mensagem-error" role="alert"></span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-full" id="submit-btn" aria-label="Enviar mensagem de contato">
+                <span class="btn-text">Enviar Mensagem</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+              </button>
+
+              <div class="form-feedback" id="form-feedback" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+
+          <!-- INFO -->
+          <div class="contato-info reveal">
+            <div class="info-cards">
+              <a href="mailto:etesmichel.em@gmail.com" class="info-card" aria-label="Enviar e-mail para etesmichel.em@gmail.com">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="info-text">
+                  <span class="info-label">E-mail</span>
+                  <span class="info-value">etesmichel.em@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="tel:+5511994916755" class="info-card" aria-label="Ligar para (11) 99491-6755">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4a2 2 0 0 1 1.99-2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.02-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="info-text">
+                  <span class="info-label">Telefone / WhatsApp</span>
+                  <span class="info-value">(11) 99491-6755</span>
+                </div>
+              </a>
+
+              <div class="info-card" aria-label="Localização: São Bernardo do Campo, SP">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="info-text">
+                  <span class="info-label">Localização</span>
+                  <span class="info-value">São Bernardo do Campo, SP</span>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="https://wa.me/5511994916755"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-whatsapp"
+              aria-label="Chamar no WhatsApp — abre em nova aba"
+            >
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              Chamar no WhatsApp
+            </a>
+
+            <div class="contato-availability">
+              <span class="avail-dot" aria-hidden="true"></span>
+              Disponível para novos projetos
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="logo" aria-label="Etestech — Início">
+          <span class="logo-mark" aria-hidden="true">E</span>
+          <span class="logo-text">testech</span>
+        </a>
+        <p class="footer-tagline">Tecnologia que conecta pessoas e negócios</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Links rápidos">
+        <p class="footer-nav-title">Links rápidos</p>
+        <ul role="list">
+          <li><a href="#servicos" class="footer-link">Serviços</a></li>
+          <li><a href="#sobre" class="footer-link">Sobre</a></li>
+          <li><a href="#portfolio" class="footer-link">Portfólio</a></li>
+          <li><a href="#contato" class="footer-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <p class="footer-nav-title">Contato</p>
+        <a href="mailto:etesmichel.em@gmail.com" class="footer-link">etesmichel.em@gmail.com</a>
+        <a href="tel:+5511994916755" class="footer-link">(11) 99491-6755</a>
+        <p class="footer-link">São Bernardo do Campo, SP</p>
+      </div>
+
+      <div class="footer-social">
+        <p class="footer-nav-title">Redes sociais</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="LinkedIn da Etestech">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram da Etestech">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="GitHub da Etestech">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 Etestech. Todos os direitos reservados.</p>
+        <p>Feito com <span aria-label="amor">♥</span> em São Bernardo do Campo, SP</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
